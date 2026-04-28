@@ -1,16 +1,59 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>AI4S CNS Agent — MoKangMedical</title><meta name="description" content="AI Agent for Central Nervous System Drug Discovery">
-<link rel="stylesheet" href="https://mokangmedical.github.io/opc-homepage/shared-design-system.css">
-</head><body>
-<nav class="eco-nav"><a class="nav-brand" href="https://mokangmedical.github.io/opc-homepage/">MoKangMedical</a>
-<div class="nav-links"><a href="https://github.com/MoKangMedical/ai4s-cns-agent"><a href="pricing.html">定价</a>
-<a href="https://github.com/MoKangMedical">GitHub</a><a href="https://mokangmedical.github.io/opc-homepage/">Ecosystem</a><a href="#features">Features</a><a href="#pricing">Pricing</a></div></nav>
-<section class="hero"><div class="badge">Drug Discovery</div><h1>AI4S CNS Agent</h1><p class="subtitle">AI Agent for Central Nervous System Drug Discovery</p>
-<div class="btn-group"><a href="https://github.com/MoKangMedical/ai4s-cns-agent" class="btn btn-primary">View on <a href="pricing.html">定价</a>
-<a href="https://github.com/MoKangMedical">GitHub</a><a href="#features" class="btn btn-outline">Explore Features</a></div></section>
-<section class="section" id="stats"><div class="stats"><div><div class="stat-num">BBB</div><div class="stat-label">Prediction</div></div><div><div class="stat-num">Neuro</div><div class="stat-label">Safety</div></div><div><div class="stat-num">Auto</div><div class="stat-label">Research</div></div><div><div class="stat-num">CNS</div><div class="stat-label">Specialized</div></div></div></section>
-<section class="section" id="features"><h2 class="section-title">Key Features</h2><p class="section-desc">Powerful capabilities for medical professionals</p><div class="card-grid"><div class="card fade-up"><div class="card-icon">🧠</div><h3>CNS Target ID</h3><p>AI-driven identification of CNS drug targets from multi-omics data</p></div><div class="card fade-up"><div class="card-icon">💊</div><h3>BBB Prediction</h3><p>Blood-brain barrier penetration prediction for CNS drug candidates</p></div><div class="card fade-up"><div class="card-icon">🔬</div><h3>Neurotoxicity</h3><p>In silico neurotoxicity screening and safety assessment</p></div><div class="card fade-up"><div class="card-icon">📊</div><h3>Clinical Trial</h3><p>CNS clinical trial design optimization and patient stratification</p></div><div class="card fade-up"><div class="card-icon">🤖</div><h3>Agent System</h3><p>Autonomous research agent that explores CNS drug space</p></div><div class="card fade-up"><div class="card-icon">📝</div><h3>Report Gen</h3><p>Auto-generated research reports with literature citations</p></div></div></section>
-<section class="section" id="pricing"><h2 class="section-title">Pricing</h2><p class="section-desc">Choose your plan</p><div class="pricing-grid"><div class="price-card "><h3>Academic</h3><div class="price-tag">Free</div><ul><li>Basic tools</li><li>Limited analyses</li><li>Community</li></ul><a href="https://github.com/MoKangMedical/ai4s-cns-agent" class="btn btn-primary" style="width:100%;justify-content:center">Get Started</a></div><div class="price-card featured"><div class="price-badge">Most Popular</div><h3>Biotech</h3><div class="price-tag">$299/mo</div><ul><li>Full platform</li><li>API access</li><li>Support</li></ul><a href="https://github.com/MoKangMedical/ai4s-cns-agent" class="btn btn-primary" style="width:100%;justify-content:center">Get Started</a></div><div class="price-card "><h3>Pharma</h3><div class="price-tag">$999/mo</div><ul><li>Custom models</li><li>Dedicated support</li><li>SLA</li></ul><a href="https://github.com/MoKangMedical/ai4s-cns-agent" class="btn btn-primary" style="width:100%;justify-content:center">Get Started</a></div></div></section>
-<footer class="footer"><div class="footer-links"><a href="https://mokangmedical.github.io/opc-homepage/">Ecosystem</a><a href="https://github.com/MoKangMedical"><a href="pricing.html">定价</a>
-<a href="https://github.com/MoKangMedical">GitHub</a></div><p>&copy; 2025 MoKangMedical</p></footer>
-</body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI4S CNS Agent</title>
+<meta name="description" content="CNS药物研发AI Agent — 中枢神经系统药物发现智能体">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0b0f1a;--bg2:#111827;--t:#f1f5f9;--t2:#94a3b8;--a:#ec4899;--bdr:#1e293b}
+body{font-family:-apple-system,sans-serif;background:var(--bg);color:var(--t);line-height:1.6}
+a{color:var(--a);text-decoration:none}
+.ct{max-width:1000px;margin:0 auto;padding:0 1.5rem}
+.hero{min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 1.5rem 4rem}
+.hero h1{font-size:2.5rem;font-weight:800;margin-bottom:1rem}
+.hero h1 .g{background:linear-gradient(135deg,var(--a),#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero .sub{font-size:1.1rem;color:var(--t2);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto}
+.fg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;margin:3rem 0}
+.fc{background:var(--bg2);border:1px solid var(--bdr);border-radius:12px;padding:1.5rem;transition:all .3s}
+.fc:hover{border-color:var(--a);transform:translateY(-2px)}
+.fc h3{font-size:1rem;font-weight:600;margin-bottom:.3rem}
+.fc p{color:var(--t2);font-size:.88rem}
+.btns{display:flex;gap:1rem;justify-content:center;margin-top:2rem}
+.btn{padding:.8rem 2rem;border-radius:10px;font-weight:600;cursor:pointer;transition:all .3s;border:none;display:inline-block}
+.bp{background:linear-gradient(135deg,var(--a),#8b5cf6);color:#fff}
+.bp:hover{transform:translateY(-2px);color:#fff}
+.bo{background:transparent;color:var(--t);border:1px solid var(--bdr)}
+ft{background:var(--bg2);border-top:1px solid var(--bdr);padding:2rem 0;text-align:center;margin-top:4rem}
+ft p{color:var(--t2);font-size:.85rem}
+.el{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+.el a{background:#1e293b;padding:.3rem .8rem;border-radius:6px;font-size:.8rem;color:var(--t2)}
+</style>
+</head>
+<body>
+<section class="hero"><div class="ct">
+<h1>🧠 AI4S CNS Agent<br><span class="g">CNS药物研发AI Agent</span></h1>
+<p class="sub">CNS药物研发AI Agent — 中枢神经系统药物发现智能体</p>
+<div class="fg"><div class="fc"><h3>🧠 靶点发现</h3><p>CNS疾病靶点优先级排序</p></div>
+<div class="fc"><h3>💊 分子设计</h3><p>BBB穿透性分子生成</p></div>
+<div class="fc"><h3>📊 ADMET预测</h3><p>CNS特异性ADMET预测</p></div>
+<div class="fc"><h3>🔬 文献挖掘</h3><p>CNS研究文献自动分析</p></div>
+<div class="fc"><h3>📋 临床设计</h3><p>CNS临床试验方案优化</p></div>
+<div class="fc"><h3>🔗 知识图谱</h3><p>CNS疾病-药物-靶点图谱</p></div></div>
+<div class="btns">
+<a href="https://github.com/MoKangMedical" target="_blank" class="btn bp">View on GitHub</a>
+<a href="https://mokangmedical.github.io/opc-homepage/" class="btn bo">OPC Ecosystem</a>
+</div>
+</div></section>
+<ft><div class="ct">
+<div class="el">
+<a href="https://mokangmedical.github.io/opc-homepage/">OPC Home</a>
+<a href="https://mokangmedical.github.io/DrugMind/">DrugMind</a>
+<a href="https://mokangmedical.github.io/PharmaSim/">PharmaSim</a>
+</div>
+<p>© 2026 AI4S CNS Agent by MoKangMedical. MIT License.</p>
+</div></ft>
+</body>
+</html>
