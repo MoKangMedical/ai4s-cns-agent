@@ -1,94 +1,185 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI4S CNS Agent</title>
-<meta name="description" content="CNS药物研发AI Agent — 中枢神经系统药物发现智能体">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI4S CNS Agent — AI-Powered Central Nervous System Drug Discovery | MoKangMedical</title>
+<meta name="description" content="Multi-agent AI system for CNS drug discovery, combining blood-brain barrier permeability prediction, neurotoxicity assessment, and target identification for neu">
+<link rel="canonical" href="https://mokangmedical.github.io/ai4s-cns-agent/">
+<meta property="og:title" content="AI4S CNS Agent - AI-Powered Central Nervous System Drug Discovery">
+<meta property="og:description" content="Multi-agent AI system for CNS drug discovery, combining blood-brain barrier permeability prediction, neurotoxicity assessment, and target identification for neu">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="https://mokangmedical.github.io/opc-homepage/shared-design-system.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0b0f1a;--bg2:#111827;--t:#f1f5f9;--t2:#94a3b8;--a:#ec4899;--bdr:#1e293b}
-body{font-family:-apple-system,sans-serif;background:var(--bg);color:var(--t);line-height:1.6}
-a{color:var(--a);text-decoration:none}
-.ct{max-width:1000px;margin:0 auto;padding:0 1.5rem}
-.hero{min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 1.5rem 4rem}
-.hero h1{font-size:2.5rem;font-weight:800;margin-bottom:1rem}
-.hero h1 .g{background:linear-gradient(135deg,var(--a),#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero .sub{font-size:1.1rem;color:var(--t2);margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto}
-.fg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;margin:3rem 0}
-.fc{background:var(--bg2);border:1px solid var(--bdr);border-radius:12px;padding:1.5rem;transition:all .3s}
-.fc:hover{border-color:var(--a);transform:translateY(-2px)}
-.fc h3{font-size:1rem;font-weight:600;margin-bottom:.3rem}
-.fc p{color:var(--t2);font-size:.88rem}
-.btns{display:flex;gap:1rem;justify-content:center;margin-top:2rem}
-.btn{padding:.8rem 2rem;border-radius:10px;font-weight:600;cursor:pointer;transition:all .3s;border:none;display:inline-block}
-.bp{background:linear-gradient(135deg,var(--a),#8b5cf6);color:#fff}
-.bp:hover{transform:translateY(-2px);color:#fff}
-.bo{background:transparent;color:var(--t);border:1px solid var(--bdr)}
-ft{background:var(--bg2);border-top:1px solid var(--bdr);padding:2rem 0;text-align:center;margin-top:4rem}
-ft p{color:var(--t2);font-size:.85rem}
-.el{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
-.el a{background:#1e293b;padding:.3rem .8rem;border-radius:6px;font-size:.8rem;color:var(--t2)}
-/* Responsive improvements */
-@media(max-width:768px){
-.hero{padding:4rem 1.5rem 2rem}
-.hero h1{font-size:2rem}
-.features,.grid{grid-template-columns:1fr}
-.price-cards{grid-template-columns:1fr}
-.stats{gap:1.5rem}
-.nav{padding:0.8rem 1rem}
-.nav div{gap:0.3rem}
-.nav a{margin:0 0.4rem;font-size:0.8rem}
-.container{padding:1rem}
-}
-@media(max-width:480px){
-.hero h1{font-size:1.5rem}
-.card{padding:1.2rem}
-.metric .value{font-size:2rem}
-}
+body{background:#0a0a1a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6;padding-top:56px!important}
+.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+.hero{padding:6rem 0 4rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 50%,#818cf811 0%,transparent 50%),radial-gradient(circle at 70% 50%,#818cf808 0%,transparent 50%)}
+.hero .badge{display:inline-block;padding:0.4rem 1.2rem;border-radius:20px;background:#818cf822;color:#818cf8;font-size:0.85rem;font-weight:600;margin-bottom:1.5rem}
+.hero h1{font-size:3.5rem;font-weight:900;line-height:1.1;margin-bottom:1rem;background:linear-gradient(135deg,#fff 0%,#818cf8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:1.15rem;color:#94a3b8;max-width:700px;margin:0 auto 2rem}
+.btn-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{padding:0.75rem 1.5rem;border-radius:10px;font-weight:600;text-decoration:none;transition:all 0.3s;cursor:pointer;border:none;display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:#818cf8;color:#fff;box-shadow:0 4px 20px #818cf844}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px #818cf866}
+.btn-outline{background:transparent;color:#e2e8f0;border:1px solid rgba(255,255,255,0.15)}
+.btn-outline:hover{border-color:#818cf8;color:#818cf8}
+.section{padding:5rem 0}
+.section-title{font-size:2.2rem;font-weight:800;text-align:center;margin-bottom:0.5rem;color:#fff}
+.section-desc{text-align:center;color:#94a3b8;margin-bottom:3rem;max-width:600px;margin-left:auto;margin-right:auto}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}
+.feature-card{background:#12122a;border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:2rem;transition:all 0.3s}
+.feature-card:hover{border-color:#818cf844;transform:translateY(-4px);box-shadow:0 12px 40px #818cf815}
+.feature-icon{width:48px;height:48px;border-radius:12px;background:#818cf815;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem}
+.feature-card h3{font-size:1.1rem;font-weight:700;margin-bottom:0.5rem}
+.feature-card p{color:#94a3b8;font-size:0.9rem}
+.stats{display:flex;justify-content:center;gap:3rem;margin:3rem 0;flex-wrap:wrap}
+.stat{text-align:center}
+.stat .num{font-size:2.5rem;font-weight:900;color:#818cf8}
+.stat .lbl{font-size:0.85rem;color:#94a3b8}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.pricing-card{background:#12122a;border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:2rem;text-align:center;transition:all 0.3s;position:relative}
+.pricing-card.featured{border-color:#818cf8;box-shadow:0 0 40px #818cf822}
+.pricing-card.featured::before{content:'POPULAR';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#818cf8;color:#fff;padding:0.25rem 1rem;border-radius:20px;font-size:0.75rem;font-weight:700}
+.pricing-name{font-size:1.25rem;font-weight:700;margin-bottom:0.5rem}
+.pricing-price{font-size:3rem;font-weight:900;color:#818cf8}
+.pricing-features{list-style:none;margin:1.5rem 0;text-align:left}
+.pricing-features li{padding:0.5rem 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:0.9rem;color:#94a3b8}
+.pricing-features li::before{content:'✓ ';color:#34d399;font-weight:700}
+.cta{padding:5rem 0;text-align:center;background:linear-gradient(180deg,transparent,#818cf808)}
+.cta h2{font-size:2.5rem;font-weight:900;margin-bottom:1rem;color:#fff}
+.cta p{color:#94a3b8;margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto}
+.footer{padding:3rem 0;border-top:1px solid rgba(255,255,255,0.06);text-align:center}
+.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:1rem;flex-wrap:wrap}
+.footer-links a{color:#94a3b8;text-decoration:none;font-size:0.9rem}
+.footer-links a:hover{color:#818cf8}
+.fade-up{opacity:0;transform:translateY(20px);transition:all 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+@media(max-width:768px){.hero h1{font-size:2.2rem}.stats{gap:1.5rem}.features-grid{grid-template-columns:1fr}}
 </style>
-  <meta property="og:title" content="AI4S CNS Agent">
-  <meta property="og:description" content="CNS药物研发AI Agent — 中枢神经系统药物发现智能体">
-  <meta property="og:type" content="website">
-  <meta name="robots" content="index, follow">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AI4S CNS Agent","description":"Multi-agent AI system for CNS drug discovery, combining blood-brain barrier permeability prediction, neurotoxicity assessment, and target identification for neurological disorders.","url":"https://mokangmedical.github.io/ai4s-cns-agent/","provider":{"@type":"Organization","name":"MoKangMedical"}}
+</script>
 </head>
 <body>
-<section class="hero"><div class="ct">
-<h1>🧠 AI4S CNS Agent<br><span class="g">CNS药物研发AI Agent</span></h1>
-<p class="sub">CNS药物研发AI Agent — 中枢神经系统药物发现智能体</p>
-<div class="fg"><div class="fc"><h3>🧠 靶点发现</h3><p>CNS疾病靶点优先级排序</p></div>
-<div class="fc"><h3>💊 分子设计</h3><p>BBB穿透性分子生成</p></div>
-<div class="fc"><h3>📊 ADMET预测</h3><p>CNS特异性ADMET预测</p></div>
-<div class="fc"><h3>🔬 文献挖掘</h3><p>CNS研究文献自动分析</p></div>
-<div class="fc"><h3>📋 临床设计</h3><p>CNS临床试验方案优化</p></div>
-<div class="fc"><h3>🔗 知识图谱</h3><p>CNS疾病-药物-靶点图谱</p></div></div>
-<div class="btns">
-<a href="https://github.com/MoKangMedical" target="_blank" class="btn bp">View on GitHub</a>
-<a href="https://mokangmedical.github.io/opc-homepage/" class="btn bo">OPC Ecosystem</a>
-</div>
-</div></section>
-<ft><div class="ct">
-<div class="el">
-<a href="https://mokangmedical.github.io/opc-homepage/">OPC Home</a>
-<a href="https://mokangmedical.github.io/DrugMind/">DrugMind</a>
-<a href="https://mokangmedical.github.io/PharmaSim/">PharmaSim</a>
-</div>
-<p>© 2026 AI4S CNS Agent by MoKangMedical. MIT License.</p>
-</div></ft>
+<nav id="opc-nav" style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(10,10,30,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(99,102,241,0.2);padding:0 2rem;height:56px;display:flex;align-items:center;justify-content:space-between;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+  <a href="https://mokangmedical.github.io/opc-homepage/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-weight:700;font-size:15px">
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="url(#ng1)" stroke-width="2.5"/><path d="M10 16h12M16 10v12" stroke="url(#ng1)" stroke-width="2.5" stroke-linecap="round"/><defs><linearGradient id="ng1" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#818cf8"/><stop offset="1" stop-color="#c084fc"/></linearGradient></defs></svg>
+    <span style="background:linear-gradient(135deg,#818cf8,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent">MoKangMedical</span>
+  </a>
+  <div style="display:flex;gap:6px;align-items:center">
+    <a href="https://mokangmedical.github.io/opc-homepage/" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:13px;padding:6px 12px;border-radius:8px">生态首页</a>
+    <a href="https://github.com/MoKangMedical" target="_blank" style="color:rgba(255,255,255,0.7);text-decoration:none;font-size:13px;padding:6px 12px;border-radius:8px">GitHub</a>
+    <a href="https://mokangmedical.github.io/opc-alliance/" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;padding:6px 16px;border-radius:8px;font-weight:600;font-size:13px;text-decoration:none">OPC Hub</a>
+  </div>
+</nav>
 
-<section style="text-align:center;padding:4rem 2rem;background:linear-gradient(135deg,rgba(99,102,241,.1),transparent)">
-<h2 style="font-size:1.8rem;margin-bottom:1rem">Ready to get started?</h2>
-<p style="color:#94a3b8;margin-bottom:2rem">Join leading organizations using ai4s-cns-agent</p>
-<a href="https://github.com/MoKangMedical/ai4s-cns-agent" style="display:inline-block;padding:.8rem 2rem;background:#6366f1;color:#fff;border-radius:8px;font-weight:600;text-decoration:none">Get Started Free</a>
+<section class="hero">
+  <div class="container">
+    <div class="badge">MoKangMedical</div>
+    <h1>AI4S CNS Agent</h1>
+    <p>AI-Powered Central Nervous System Drug Discovery</p>
+    <p style="font-size:1rem;color:#94a3b8;max-width:600px;margin:0 auto 2rem">Multi-agent AI system for CNS drug discovery, combining blood-brain barrier permeability prediction, neurotoxicity assessment, and target identification for neurological disorders.</p>
+    <div class="btn-group">
+      <a href="#features" class="btn btn-primary">Explore Features</a>
+      <a href="#pricing" class="btn btn-outline">View Pricing</a>
+      <a href="https://github.com/MoKangMedical/ai4s-cns-agent" class="btn btn-outline" target="_blank">GitHub</a>
+    </div>
+  </div>
 </section>
-<footer style="background:#0a0e1a;border-top:1px solid #1e2d4a;padding:3rem 0 2rem;margin-top:4rem"><div style="max-width:1200px;margin:0 auto;padding:0 2rem"><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-bottom:2rem"><div><h4 style="color:#e2e8f0;font-size:1rem;margin-bottom:1rem">MoKangMedical</h4><p style="color:#64748b;font-size:.85rem;line-height:1.6">AI-powered healthcare innovation ecosystem with 70+ open source projects.</p></div><div><h4 style="color:#e2e8f0;font-size:1rem;margin-bottom:1rem">Core Platforms</h4><a href="https://mokangmedical.github.io/PharmaSim/" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">PharmaSim</a><a href="https://mokangmedical.github.io/tianyan/" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">Tianyan</a><a href="https://mokangmedical.github.io/DrugMind/" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">DrugMind</a></div><div><h4 style="color:#e2e8f0;font-size:1rem;margin-bottom:1rem">Research</h4><a href="https://mokangmedical.github.io/drugclip-platform/" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">DrugClip</a><a href="https://mokangmedical.github.io/virtual-cell/" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">Virtual Cell</a><a href="https://mokangmedical.github.io/darwin-framework/" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">Darwin</a></div><div><h4 style="color:#e2e8f0;font-size:1rem;margin-bottom:1rem">Connect</h4><a href="https://github.com/MoKangMedical" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">GitHub</a><a href="https://mokangmedical.github.io/opc-homepage/" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">Ecosystem</a></div></div><div style="text-align:center;padding-top:1.5rem;border-top:1px solid #1e2d4a"><p style="color:#64748b;font-size:.82rem">© 2024-2026 MoKangMedical. All rights reserved.</p></div></div></footer>
+
+<section class="section" id="features">
+  <div class="container">
+    <h2 class="section-title">Core Capabilities</h2>
+    <p class="section-desc">Powerful features designed for modern biomedical research</p>
+    <div class="features-grid">
+<div class="feature-card fade-up">
+  <div class="feature-icon">🧬</div>
+  <h3>BBB Permeability</h3>
+  <p>Predict blood-brain barrier crossing with 94% accuracy using graph neural networks</p>
+</div>
+<div class="feature-card fade-up">
+  <div class="feature-icon">⚡</div>
+  <h3>Neurotoxicity Screening</h3>
+  <p>Early-stage neurotoxicity assessment using in-silico models and adverse outcome pathways</p>
+</div>
+<div class="feature-card fade-up">
+  <div class="feature-icon">🔬</div>
+  <h3>CNS Target Atlas</h3>
+  <p>Curated database of 2,400+ CNS drug targets with pathway annotations</p>
+</div>
+<div class="feature-card fade-up">
+  <div class="feature-icon">📊</div>
+  <h3>PK/PD Modeling</h3>
+  <p>Brain-specific pharmacokinetic/pharmacodynamic modeling with compartmental analysis</p>
+</div>
+<div class="feature-card fade-up">
+  <div class="feature-icon">🛡️</div>
+  <h3>Safety Profiling</h3>
+  <p>Comprehensive CNS safety assessment including QT prolongation and seizure risk</p>
+</div>
+<div class="feature-card fade-up">
+  <div class="feature-icon">📚</div>
+  <h3>Literature Mining</h3>
+  <p>NLP-powered extraction of CNS drug discovery insights from 500K+ papers</p>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing" style="background:linear-gradient(180deg,transparent,rgba(255,255,255,0.02))">
+  <div class="container">
+    <h2 class="section-title">Pricing</h2>
+    <p class="section-desc">Choose the plan that fits your needs</p>
+    <div class="pricing-grid">
+<div class="pricing-card fade-up">
+  <div class="pricing-name">Researcher</div>
+  <div class="pricing-price">$0</div>
+  <ul class="pricing-features"><li>100 analyses/month</li><li>Basic BBB prediction</li><li>Community support</li></ul>
+  <a href="#" class="btn btn-outline" style="width:100%;justify-content:center">Get Started</a>
+</div>
+<div class="pricing-card featured fade-up">
+  <div class="pricing-name">Professional</div>
+  <div class="pricing-price">$399/mo</div>
+  <ul class="pricing-features"><li>10,000 analyses/month</li><li>Full CNS suite</li><li>Priority support</li><li>API access</li></ul>
+  <a href="#" class="btn btn-primary" style="width:100%;justify-content:center">Get Started</a>
+</div>
+<div class="pricing-card fade-up">
+  <div class="pricing-name">Enterprise</div>
+  <div class="pricing-price">Custom</div>
+  <ul class="pricing-features"><li>Unlimited analyses</li><li>Custom models</li><li>On-premise</li><li>Dedicated support</li></ul>
+  <a href="#" class="btn btn-outline" style="width:100%;justify-content:center">Get Started</a>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Ready to Get Started?</h2>
+    <p>Join thousands of researchers using AI4S CNS Agent to accelerate their work</p>
+    <div class="btn-group">
+      <a href="#" class="btn btn-primary">Start Free Trial</a>
+      <a href="https://mokangmedical.github.io/opc-homepage/" class="btn btn-outline">Explore Ecosystem</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://mokangmedical.github.io/opc-homepage/">Ecosystem</a>
+      <a href="https://github.com/MoKangMedical">GitHub</a>
+      <a href="https://mokangmedical.github.io/opc-alliance/">OPC Alliance</a>
+    </div>
+    <p style="color:#94a3b8;font-size:0.85rem">&copy; 2025 MoKangMedical. All rights reserved.</p>
+  </div>
+</footer>
+
 <script>
-// Scroll reveal
-const obs=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting){i.target.style.opacity='1';i.target.style.transform='translateY(0)';obs.unobserve(i.target)}})},{threshold:.1});
-document.querySelectorAll('.fc,.pc,.card,div[class*=card],div[class*=feature]').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='all .6s cubic-bezier(.16,1,.3,1)';obs.observe(el)});
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'})})});
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, {threshold: 0.1});
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
-</body>
-</html>
+</body></html>
