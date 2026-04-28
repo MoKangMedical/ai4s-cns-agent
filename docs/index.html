@@ -30,7 +30,28 @@ ft{background:var(--bg2);border-top:1px solid var(--bdr);padding:2rem 0;text-ali
 ft p{color:var(--t2);font-size:.85rem}
 .el{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
 .el a{background:#1e293b;padding:.3rem .8rem;border-radius:6px;font-size:.8rem;color:var(--t2)}
+/* Responsive improvements */
+@media(max-width:768px){
+.hero{padding:4rem 1.5rem 2rem}
+.hero h1{font-size:2rem}
+.features,.grid{grid-template-columns:1fr}
+.price-cards{grid-template-columns:1fr}
+.stats{gap:1.5rem}
+.nav{padding:0.8rem 1rem}
+.nav div{gap:0.3rem}
+.nav a{margin:0 0.4rem;font-size:0.8rem}
+.container{padding:1rem}
+}
+@media(max-width:480px){
+.hero h1{font-size:1.5rem}
+.card{padding:1.2rem}
+.metric .value{font-size:2rem}
+}
 </style>
+  <meta property="og:title" content="AI4S CNS Agent">
+  <meta property="og:description" content="CNS药物研发AI Agent — 中枢神经系统药物发现智能体">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
 </head>
 <body>
 <section class="hero"><div class="ct">
@@ -55,5 +76,6 @@ ft p{color:var(--t2);font-size:.85rem}
 </div>
 <p>© 2026 AI4S CNS Agent by MoKangMedical. MIT License.</p>
 </div></ft>
+<footer style="background:#0a0e1a;border-top:1px solid #1e2d4a;padding:3rem 0 2rem;margin-top:4rem"><div style="max-width:1200px;margin:0 auto;padding:0 2rem"><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-bottom:2rem"><div><h4 style="color:#e2e8f0;font-size:1rem;margin-bottom:1rem">MoKangMedical</h4><p style="color:#64748b;font-size:.85rem;line-height:1.6">AI-powered healthcare innovation ecosystem with 70+ open source projects.</p></div><div><h4 style="color:#e2e8f0;font-size:1rem;margin-bottom:1rem">Core Platforms</h4><a href="https://mokangmedical.github.io/PharmaSim/" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">PharmaSim</a><a href="https://mokangmedical.github.io/tianyan/" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">Tianyan</a><a href="https://mokangmedical.github.io/DrugMind/" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">DrugMind</a></div><div><h4 style="color:#e2e8f0;font-size:1rem;margin-bottom:1rem">Research</h4><a href="https://mokangmedical.github.io/drugclip-platform/" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">DrugClip</a><a href="https://mokangmedical.github.io/virtual-cell/" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">Virtual Cell</a><a href="https://mokangmedical.github.io/darwin-framework/" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">Darwin</a></div><div><h4 style="color:#e2e8f0;font-size:1rem;margin-bottom:1rem">Connect</h4><a href="https://github.com/MoKangMedical" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">GitHub</a><a href="https://mokangmedical.github.io/opc-homepage/" style="display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.5rem;text-decoration:none">Ecosystem</a></div></div><div style="text-align:center;padding-top:1.5rem;border-top:1px solid #1e2d4a"><p style="color:#64748b;font-size:.82rem">© 2024-2026 MoKangMedical. All rights reserved.</p></div></div></footer>
 </body>
 </html>
