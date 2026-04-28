@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI4S CNS Agent | MoKangMedical</title>
+<meta name="description" content="Specialized AI agent for central nervous system drug discovery and neuroscience research. Leverages deep learning for target identification and compound screeni">
+<meta property="og:title" content="AI4S CNS Agent - Central Nervous System AI Research Agent">
+<meta property="og:description" content="Specialized AI agent for central nervous system drug discovery and neuroscience research. Leverages deep learning for target identification and compound screening.">
+<meta property="og:type" content="website">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0f;color:#e2e8f0;line-height:1.6}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;background:linear-gradient(135deg,#8b5cf622 0%,#0a0a0f 50%,#8b5cf611 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 50%,#8b5cf608 0%,transparent 50%);animation:float 20s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(-20px,-20px)}}
+.hero-content{position:relative;z-index:1;max-width:900px}
+.badge{display:inline-block;padding:6px 16px;border-radius:20px;background:#8b5cf622;color:#8b5cf6;font-size:0.85rem;font-weight:600;margin-bottom:1.5rem;border:1px solid #8b5cf644}
+h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;margin-bottom:0.5rem;background:linear-gradient(135deg,#fff,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.subtitle{font-size:1.3rem;color:#94a3b8;margin-bottom:2rem;max-width:700px;margin-left:auto;margin-right:auto}
+.desc{font-size:1.05rem;color:#cbd5e1;max-width:750px;margin:0 auto 2.5rem;line-height:1.8}
+.cta-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{padding:14px 32px;border-radius:10px;font-size:1rem;font-weight:600;text-decoration:none;transition:all 0.3s;cursor:pointer;border:none}
+.btn-primary{background:#8b5cf6;color:#fff;box-shadow:0 4px 20px #8b5cf644}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px #8b5cf666}
+.btn-secondary{background:transparent;color:#e2e8f0;border:1px solid #334155}
+.btn-secondary:hover{border-color:#8b5cf6;color:#8b5cf6}
+.features{padding:6rem 2rem;max-width:1200px;margin:0 auto}
+.section-title{text-align:center;font-size:2.2rem;font-weight:700;margin-bottom:1rem}
+.section-sub{text-align:center;color:#94a3b8;margin-bottom:3rem;font-size:1.1rem}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.feature-card{background:#111827;border:1px solid #1e293b;border-radius:16px;padding:2rem;transition:all 0.3s;cursor:default}
+.feature-card:hover{border-color:#8b5cf644;transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.3)}
+.feature-icon{width:48px;height:48px;color:#8b5cf6;margin-bottom:1rem}
+.feature-card h3{font-size:1.1rem;font-weight:600;margin-bottom:0.5rem}
+.tech-stack{padding:4rem 2rem;background:#111827}
+.tech-grid{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;max-width:900px;margin:2rem auto 0}
+.tech-tag{padding:8px 20px;border-radius:8px;background:#1e293b;color:#94a3b8;font-size:0.9rem;border:1px solid #334155}
+.cta-section{padding:6rem 2rem;text-align:center;background:linear-gradient(135deg,#8b5cf611,#0a0a0f)}
+.cta-section h2{font-size:2.5rem;font-weight:700;margin-bottom:1rem}
+.cta-section p{color:#94a3b8;margin-bottom:2rem;font-size:1.1rem}
+.footer{padding:3rem 2rem;text-align:center;color:#64748b;font-size:0.85rem;border-top:1px solid #1e293b}
+.footer a{color:#8b5cf6;text-decoration:none}
+.nav-toggle{display:none}
+@media(max-width:768px){
+  .features-grid{grid-template-columns:1fr}
+  .cta-group{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="hero-content">
+    <span class="badge">Drug Discovery</span>
+    <h1>AI4S CNS Agent</h1>
+    <p class="subtitle">Central Nervous System AI Research Agent</p>
+    <p class="desc">Specialized AI agent for central nervous system drug discovery and neuroscience research. Leverages deep learning for target identification and compound screening.</p>
+    <div class="cta-group">
+      <a href="https://github.com/MoKangMedical/ai4s-cns-agent" class="btn btn-primary" target="_blank">View on GitHub</a>
+      <a href="#features" class="btn btn-secondary">Explore Features</a>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <h2 class="section-title">Core Capabilities</h2>
+  <p class="section-sub">Built for healthcare innovation at scale</p>
+  <div class="features-grid">
+        <div class="feature-card">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <h3>CNS Target Discovery</h3>
+        </div>
+        <div class="feature-card">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <h3>Blood-Brain Barrier Prediction</h3>
+        </div>
+        <div class="feature-card">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+          <h3>Neurotoxicity Screening</h3>
+        </div>
+        <div class="feature-card">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+          <h3>Compound Optimization</h3>
+        </div>
+        <div class="feature-card">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+          <h3>Literature Mining</h3>
+        </div>
+        <div class="feature-card">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          <h3>Pipeline Integration</h3>
+        </div>
+  </div>
+</section>
+
+<section class="tech-stack">
+  <h2 class="section-title" style="margin-bottom:1rem">Technology Stack</h2>
+  <p class="section-sub">Powered by modern, reliable technologies</p>
+  <div class="tech-grid">
+    <span class="tech-tag">Python</span>
+    <span class="tech-tag">FastAPI</span>
+    <span class="tech-tag">PyTorch</span>
+    <span class="tech-tag">Docker</span>
+    <span class="tech-tag">PostgreSQL</span>
+    <span class="tech-tag">Redis</span>
+    <span class="tech-tag">React</span>
+    <span class="tech-tag">TypeScript</span>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Ready to Get Started?</h2>
+  <p>Join the MoKangMedical ecosystem and build the future of healthcare AI</p>
+  <div class="cta-group">
+    <a href="https://github.com/MoKangMedical/ai4s-cns-agent" class="btn btn-primary" target="_blank">Get Started</a>
+    <a href="https://mokangmedical.github.io/opc-homepage/" class="btn btn-secondary">Explore Ecosystem</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Part of <a href="https://mokangmedical.github.io/opc-homepage/">MoKangMedical OPC Ecosystem</a></p>
+  <p style="margin-top:0.5rem">&copy; 2026 MoKangMedical. All rights reserved.</p>
+</footer>
+</body>
+</html>
